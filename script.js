@@ -11,7 +11,7 @@ document.getElementById("calculateBtn").addEventListener("click", function() {
     const wallet_per_quarter = total_usd / 4;
 
     // Step 3: Calculate wallet amount divided by grant price
-    const wallet_div_grant = wallet_amount / grant_price; // This will give you the shares based on the wallet amount alone
+    const wallet_div_grant = wallet_per_quarter / grant_price; // This will give you the shares based on the wallet amount alone
 
     // Step 4: Calculate shares quantity based on wallet amount per quarter divided by grant price (rounding up)
     const shares_quantity = Math.ceil(wallet_per_quarter / grant_price);
