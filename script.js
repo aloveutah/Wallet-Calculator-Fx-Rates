@@ -7,7 +7,7 @@ document.getElementById("calculateBtn").addEventListener("click", function() {
     // Step 1: Calculate the total amount in USD
     const total_usd = (wallet_amount + premiums) * fx_rate;           
 
-    // Step 2: Calculate wallet amount per quarter based on total USD
+    // Step 2: Calculate wallet amount per quarter based on total USD (to four decimal places)
     const wallet_per_quarter = total_usd / 4;
 
     // Step 3: Calculate shares quantity based on wallet amount per quarter divided by grant price (rounding up)
