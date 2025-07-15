@@ -7,7 +7,7 @@ document.getElementById("calculateBtn").addEventListener("click", function() {
     // Step 1: Calculate the total amount in USD
     const total_usd = (wallet_amount + premiums) * fx_rate;           
 
-    // Step 2: Calculate wallet amount per quarter based on total USD (to four decimal places)
+    // Step 2: Calculate wallet amount per quarter based on total USD
     const wallet_per_quarter = total_usd / 4;
 
     // Step 3: Calculate shares quantity based on wallet amount per quarter divided by grant price (rounding up)
@@ -15,7 +15,7 @@ document.getElementById("calculateBtn").addEventListener("click", function() {
 
     // Update the results in the HTML
     document.getElementById('total_usd').innerText = 'Total USD: ' + total_usd.toFixed(2);
-    document.getElementById('wallet_per_quarter').innerText = 'Wallet Amount per Quarter: ' + wallet_per_quarter.toFixed(4);
+    document.getElementById('wallet_per_quarter').innerText = 'Wallet Amount per Quarter: ' + wallet_per_quarter.toFixed(4); // Ensure toFixed(4) is being used
     document.getElementById('shares_quantity').innerText = 'Shares Quantity: ' + shares_quantity;
     document.getElementById('result').style.display = 'block';
 });
