@@ -20,6 +20,6 @@ document.getElementById("calculateBtn").addEventListener("click", function() {
     document.getElementById('total_usd').innerText = 'Total USD: ' + total_usd.toFixed(2);
     document.getElementById('wallet_per_quarter').innerText = 'Wallet Amount per Quarter: ' + wallet_per_quarter.toFixed(4);
     document.getElementById('wallet_div_grant').innerText = 'Wallet Amount per Quarter / Grant Price: ' + wallet_div_grant.toFixed(4); // Format to 4 decimal places
-    document.getElementById('shares_quantity').innerText = 'Shares Quantity: ' + shares_quantity; // Display rounded shares quantity
+    document.getElementById('share_quantity (round up)').innerText = 'Shares Quantity: ' + shares_quantity; // Display rounded shares quantity
     document.getElementById('result').style.display = 'block';
 });
