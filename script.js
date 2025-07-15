@@ -1,3 +1,4 @@
+
 document.getElementById("calculateBtn").addEventListener("click", function() {
     const fx_rate = parseFloat(document.getElementById('fx_rate').value);
     const wallet_amount = parseFloat(document.getElementById('wallet_amount').value);
@@ -11,15 +12,15 @@ document.getElementById("calculateBtn").addEventListener("click", function() {
     const wallet_per_quarter = total_usd / 4;
 
     // Step 3: Calculate wallet amount per quarter divided by grant price
-    const wallet_div_grant = wallet_per_quarter / grant_price; // This will give you the value based on wallet per quarter
+    const wallet_div_grant = wallet_per_quarter / grant_price; // This will give you the value based on wallet amount per quarter
 
-    // Step 4: Calculate shares quantity based on wallet amount per quarter divided by grant price (rounding up)
-    const shares_quantity = Math.ceil(wallet_per_quarter / grant_price); // Total shares based on wallet_per_quarter divided by grant price
+    // Step 4: Calculate share quantity based on wallet amount per quarter divided by grant price (rounding up)
+    const shares_quantity = Math.ceil(wallet_per_quarter / grant_price); // Round up to get a whole number
 
     // Update the results in the HTML
     document.getElementById('total_usd').innerText = 'Total USD: ' + total_usd.toFixed(2);
     document.getElementById('wallet_per_quarter').innerText = 'Wallet Amount per Quarter: ' + wallet_per_quarter.toFixed(4);
-    document.getElementById('wallet_div_grant').innerText = 'Wallet Amount per Quarter / Grant Price: ' + wallet_div_grant.toFixed(4); // Format to 4 decimal places
-    document.getElementById('share_quantity (round up)').innerText = 'Shares Quantity: ' + shares_quantity; // Display rounded shares quantity
+    document.getElementById('wallet_div_grant').innerText = 'Wallet Amount per Quarter / Grant Price: ' + wallet_div_grant.toFixed(4);
+    document.getElementById('shares_quantity').innerText = 'Share Quantity (Round Up): ' + shares_quantity; // Updated text here
     document.getElementById('result').style.display = 'block';
 });
