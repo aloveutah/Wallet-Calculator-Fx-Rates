@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wallet Grant Calculator for RSUs (Fx Rates)</title>
+    <title>Wallet Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1> Wallet Grant Calculator</</h1>
+    <h1>Wallet Calculator</h1>
     <label for="fx_rate">Select FX Rate:</label>
     <select id="fx_rate">
         <option value="0.272294078">AED</option>
@@ -43,10 +43,10 @@
         <option value="0.056255668">ZAR</option>
     </select><br><br>
 
-    <label for="wallet_amount"> Your Wallet Amount:</label>
-    <input type="number" id="wallet_amount" /><br><br>
+    <label for="wallet_amount">Wallet Amount:</label>
+    <input type="number" id="your wallet_amount" /><br><br>
 
-    <label for="premiums">RSU Premiums:</label>
+    <label for="premiums">Premiums:</label>
     <input type="number" id="premiums" /><br><br>
 
     <label for="grant_price">Grant Price:</label>
@@ -56,7 +56,7 @@
 
     <div class="result" id="result" style="display: none;">
         <h2>Results:</h2>
-        <p id="Wallet Amount in usd"></p>
+        <p id="total wallet_usd"></p>
         <p id="wallet_per_quarter"></p>
         <p id="shares_quantity"></p>
     </div>
